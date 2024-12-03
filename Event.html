@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Search Application</title>
+
+  <link rel="icon" href="assests/News Assets/icons8-news-500.png" type="image/x-icon">
+  <link rel="stylesheet" href="./styles/Event.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo" style="font-family: Sour Gummy;">
+          <a href="Main.html" style="text-decoration: none; color: white;">TriApi</a>
+        </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Event.html">Events</a></li>
+                <li><a href="Radio.html">Radio</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+      <header>
+        <h1>Event Search</h1>
+      </header>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="searchQuery"
+          placeholder="Search for events..."
+          aria-label="Search for events"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="feedback" class="hidden"></div>
+      <div id="eventsContainer" class="events-container"></div>
+
+      <div class="subscribe-section">
+        <h3>Subscribe for Event Updates</h3>
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="Enter your email"
+          aria-label="Enter your email"
+        />
+        <button id="subscribeBtn">Subscribe</button>
+        <div id="subscriptionFeedback" class="hidden"></div>
+      </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 TriAPI | All Rights Reserved</p>
+      </div>
+    </footer>
+
+  <script src="./script/Event.js"></script>
+</body>
+</html>

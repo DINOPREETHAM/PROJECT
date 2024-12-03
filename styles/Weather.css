@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-weight: 600;
+}
+
+body{
+    background: url('/assests/weather/clouds.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.regular-txt{
+    font-weight: 400;
+}
+
+
+
+.main-container{
+    margin-top: 50px;
+    border: solid;
+    width: 800px;
+    height: 490px;
+    z-index: 1;
+    background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(255, 255, 255, 0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+    padding: 20px;
+}
+
+.input-container{
+    text-align: center;
+    position: relative;
+    margin-bottom: 65px;
+}
+
+.city-input{
+    width: 60%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgb(0, 0, 0, 0.15);
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+    padding-right: 45px;
+}
+
+.city-input:focus{
+    border: 3px solid rgb(0, 0, 0, 0.15);
+}
+
+.city-input::placeholder{
+    color: rgb(255, 255, 255, 0.75);
+}
+
+.search-btn{
+    position: absolute;
+    right: 176px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 70px;
+}
+
+.location-date-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.weather-summary-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 140px;
+}
+
+.weather-summary-img{
+    height: 120px;
+    width: 120px;
+}
+
+.weather-summary-info{
+    text-align: end;
+
+}
+
+.weather-conditions-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition-item{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.condition-item span{
+    font-size: 30px;
+}
+
+.forecast-items-container{
+    display: flex;
+    gap: 30px;
+    overflow: scroll;
+    padding-bottom: 12px;
+    overflow-y: hidden;
+    justify-content: center;
+} 
+
+.forecast-items-container::-webkit-scrollbar{
+    height: 8px;
+}
+
+.forecast-items-container::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0, 0.1);
+    border-radius: 99px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb{
+    background: rgb(0, 0, 0, 0.15);
+    border-radius: 99px;
+}
+
+.forecast-item{
+    min-width: 70px;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 12px;
+    transition: 0.3s background;
+}
+
+.forecast-item:hover{
+    background: rgb(255, 255, 255, 0.15);
+}
+
+.forecast-item-img{
+    width: 35px;
+    height: 35px;
+}
+
+.section-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 8%;
+}
+
+.section-message img{
+    height: 180px;
+    width: fit-content;
+}
+
+.map-btn {
+    position: absolute;
+    right: 20px; /* Adjust this to position it correctly */
+    top: 50%;
+    transform: translateY(-20%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px; /* Adjust icon size */
+    color: white;
+}
+
+
+.navbar {
+    background-color: #33333300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    padding: 20px 50px;
+  }
+  
+  .navbar .logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    pad: 0 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav-links li a:hover {
+    color: #61e3f4;
+    transition: color 0.3s ease;
+  }

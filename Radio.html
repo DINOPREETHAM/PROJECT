@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Station</title>
+    <link rel="icon" href="assests/News Assets/icons8-news-500.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/Radio.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" style="font-family: Sour Gummy;">
+                <a href="./Main.html" style="text-decoration: none; color: white;">TriApi</a>
+            </h1>
+            
+            <nav>
+                <ul>
+                    <li><a href="./Weather.html">Weather</a></li>
+                    <li><a href="./News.html">News</a></li>
+                    <li><a href="./Event.html">Events</a></li>
+                    <li><a href="./Radio.html">Radio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <div class="container">
+            <h1>Radio Station</h1>
+
+            <label for="stationId">Enter Station ID:</label>
+            <input type="text" id="stationId" placeholder="Enter Station ID">
+            <button id="getStatus">Get Station Status</button>
+            <button id="getHistory">Get Track History</button>
+            <button id="getNextTrack">Get Next Track</button>
+
+            <div id="status"></div>
+            <div id="history"></div>
+            <div id="nextTrack"></div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 TriAPI | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="./script/Radio.js"></script>
+</body>
+</html>

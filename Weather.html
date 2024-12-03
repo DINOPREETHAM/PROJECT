@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="assests/News Assets/icons8-news-500.png" type="image/x-icon">
+
+    <link href="./styles/Weather.css" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+          <a href="Main.html">TriApi</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="./Weather.html">Weather</a></li>
+          <li><a href="./News.html">News</a></li>
+          <li><a href="./Event.html">Events</a></li>
+          <li><a href="./Radio.html">Radio</a></li>
+        </ul>
+      </nav>
+
+    <main class="main-container">
+
+        <header class="input-container">
+            <input type="text" class="city-input" placeholder="Search City">
+            <button class="search-btn">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+
+            <button class="map-btn">
+                <span class="material-symbols-outlined">
+                    map
+                </span>
+            </button>
+        </header>
+
+        <section class="weather-info" style="display: none;">
+            <div class="location-date-container">
+                <div class="location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+                    <h4 class="country_text">Jakarta</h4>
+                </div>
+                <h5 class="current-date-text regular-txt">Mon, 07 Oct</h5>
+            </div>
+
+            <div class="weather-summary-container">
+                <img src="./assests/weather/clouds.svg" alt="" class="weather-summary-img">
+                <div class="weather-summary-info">
+                    <h1 class="temp-txt">29 °C</h1>
+                    <h3 class="condition-txt regular-txt">Clouds</h3>
+                </div>
+            </div>
+
+            <div class="weather-conditions-container">
+                <div class="condition-item">
+                    <span class="material-symbols-outlined">
+                        water_drop
+                    </span>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Humidity</h5>
+                        <h5 class="humidity-value-txt">55%</h5>
+                    </div>
+                </div>
+
+                <div class="condition-item">
+                    <span class="material-symbols-outlined">
+                        air
+                    </span>
+                    <div class="condition-info">
+                        <h5 class="regular-txt">Wind Speed</h5>
+                        <h5 class="wind-value-txt">2 M/s</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast-items-container">
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">15 Oct</h5>
+                    <img src="./assests/weather/thunderstorm.svg" class="forecast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">15 Oct</h5>
+                    <img src="./assests/weather/thunderstorm.svg" class="forecast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">15 Oct</h5>
+                    <img src="./assests/weather/thunderstorm.svg" class="forecast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 class="forecast-item-date regular-txt">15 Oct</h5>
+                    <img src="./assests/weather/thunderstorm.svg" class="forecast-item-img">
+                    <h5 class="forcast-item-temp">29 °C</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-map-container" style="display: none;">
+            <div id="weather-map" style="width: 100%; height: 400px;"></div>
+        </section>
+
+        <section class="search-city section-message">
+            <img src="./assests/message/search-city.png">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather conditions of the city
+                </h4>
+            </div>
+        </section>
+
+        <section class="not-found section-message" style="display: none;">
+            <img src="./assests/message/nofound.png">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">
+                    Find out the weather conditions of the city
+                </h4>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="./script/Weather.js"></script>
+</body>
+
+</html>
